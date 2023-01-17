@@ -10,6 +10,7 @@ import { AiOutlineHeart, AiOutlineCheck } from 'react-icons/ai';
 import { FaShippingFast } from 'react-icons/fa';
 import { AiOutlineQq } from 'react-icons/ai';
 import { GrCopy } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 
 const SingleProduct = () => {
     const props = { width: 600, height: 600, zoomWidth: 600, img: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg" };
@@ -148,7 +149,7 @@ const SingleProduct = () => {
                                             </h2>
                                             <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                                 <div className="accordion-body">
-                                                    <a href='#' onClick={(e) => { e.preventDefault(), copyToClipboard('https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg'); }}>Click for copy <AiOutlineCheck className='check fs-5 ms-1' /></a>
+                                                    <Link href='#' onClick={(e) => { e.preventDefault(), copyToClipboard('https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg'); }}>Click for copy <AiOutlineCheck className='check fs-5 ms-1' /></Link>
                                                 </div>
                                             </div>
                                         </div>
