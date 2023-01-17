@@ -15,7 +15,8 @@ import { Link } from 'react-router-dom';
 const SingleProduct = () => {
     const props = { width: 600, height: 600, zoomWidth: 600, img: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg" };
     const [orderedProduct, setorderedProduct] = useState(true);
-    const copyToClipboard = (text) => {
+    const copyToClipboard = (text, e) => {
+        e.preventDefault()
         console.log('text', text)
         var textField = document.createElement('textarea')
         textField.innerText = text
@@ -149,7 +150,7 @@ const SingleProduct = () => {
                                             </h2>
                                             <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                                 <div className="accordion-body">
-                                                    <Link href='#' onClick={(e) => { e.preventDefault(), copyToClipboard('https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg'); }}>Click for copy <AiOutlineCheck className='check fs-5 ms-1' /></Link>
+                                                    <Link href='#' onClick={() => { copyToClipboard('https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg'); }}>Click for copy <AiOutlineCheck className='check fs-5 ms-1' /></Link>
                                                 </div>
                                             </div>
                                         </div>
